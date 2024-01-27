@@ -1,3 +1,4 @@
 module.exports = {
-    token: "" // Ton token
+    token: "", // Ton token
+    prefix: "&"
 }

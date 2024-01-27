@@ -24,15 +24,12 @@ client.on("ready", () => {
 
 client.on("messageCreate", async message => {
   if (message.author.id !== client.user.id) return
-
-  // Exemple : Vérifier si le message commence par le préfixe défini dans votre configuration
+  
   if (!message.content.startsWith(config.prefix)) return;
 
-  // Exemple : Séparer la commande et les arguments
   const args = message.content.slice(config.prefix.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
 
-  // Exemple : Vérifier si la commande existe dans la collection
   const command = client.commands.get(commandName);
 
   if (command) {

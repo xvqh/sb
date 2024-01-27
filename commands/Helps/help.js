@@ -1,9 +1,10 @@
 const Discord = require("discord.js-selfbot-v13");
-
+const config = require("../../config")
+const prefix = config.prefix
 module.exports = {
   name: "help",
   description: "Menu Help",
-  run: async (client, message, args, db, prefix) => {
+  run: async (client, message, args) => {
 
     message.edit(`
 ⛧ __**Xyla**__ ⛧

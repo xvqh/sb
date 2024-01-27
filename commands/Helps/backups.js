@@ -4,7 +4,7 @@ module.exports = {
   name: "backups",
   description: "backup Mode",
   run: async (client, message, args, db, prefix) => {
-      message.edit(await language(client, `⛧ __**Xyla - Backup**__ ⛧
+      message.edit(`⛧ __**Xyla - Backup**__ ⛧
 \`${prefix}backup create\` ➜ **crée une backup**
 \`${prefix}backup load\` ➜ **charge une backup dans un serveur**
 \`${prefix}backup delete\` ➜ **supprimer une backup (en dev)**

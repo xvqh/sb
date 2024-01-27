@@ -7,7 +7,7 @@ const client = new Client({ checkUpdate: false});
 
 client.on("ready", () => {
   console.log(`${client.user.name} est bien en ligne`)
-}
+})
 
   client.snipe = new Map()
   client.commands = new Collection();

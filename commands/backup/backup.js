@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { language, savedb } = require("../../fonctions");
 const backup = require("discord-backup");
 
 module.exports = {

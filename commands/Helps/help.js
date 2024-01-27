@@ -1,6 +1,4 @@
-// command to get profile picture
 const Discord = require("discord.js-selfbot-v13");
-const {  language } = require("../../fonctions")
 
 module.exports = {
   name: "help",

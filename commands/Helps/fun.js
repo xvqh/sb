@@ -4,7 +4,7 @@ const prefix = config.prefix
 module.exports = {
   name: "fun",
   description: "Menu fun",
-  run: async (client, message, db, args, prefix) => {
+  run: async (client, message, args) => {
     try{
         message.edit(`
 ⛧ __**Xyla - Fun**__ ⛧

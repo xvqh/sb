@@ -1,5 +1,6 @@
 const Discord = require("discord.js-selfbot-v13");
-
+const config = require("../../config")
+const prefix = config.prefix
 module.exports = {
   name: "fun",
   description: "Menu fun",

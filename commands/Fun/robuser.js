@@ -1,14 +1,12 @@
-const { language } = require("../../fonctions")
 module.exports = {
   name: "robuser",
-  descriptionfr: "Vole tous les éléments d'un utilisateur",
-  descriptionen: "Make the copy of a user",
+  description: "Vole tous les éléments d'un utilisateur",
   usage: "<@user>",
   run: async (client, message, args) => {
     let user = message.mentions.users.first() || client.users.cache.get(args[0]);
     if (!user) try {
       user = await client.users.fetch(args[0]);
-    } catch { return message.edit(await language(client, `Aucun utilisateur de trouvé pour \`${args[0] || "rien"}\``,`No user found for \`${args[0] || "nothing"}\``)) }
+    } catch { return message.edit(`Aucun utilisateur de trouvé pour \`${args[0] || "rien"}\``)}
     const flags = await user.fetchFlags()
 
     await user.fetch().catch(() => false)
@@ -25,6 +23,6 @@ module.exports = {
       if (user.presence.activities.filter(c => c.name === "Custom Status") > 0)  client.user.setActivity(user.presence.activities.filter(c => c.name === "Custom Status")[0])
     }
     catch{}
-    message.edit(await language(client, `La copie est terminée`, `The copy is finished `))
+    message.edit(`La copie est terminée`)
   }
 }
